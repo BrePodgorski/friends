@@ -1,0 +1,21 @@
+<!-- {{friends | json}} -->
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Show</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let friend of friends">
+    <!-- this is how you make a for loop in an html -->
+    <th>{{friend.first_name}}{{friend.last_name}}</th>
+    <th><a [routerLink]="['/show', friend._id]">Show</a></th>
+    <th><a [routerLink]="['/edit', friend._id]">Update</a></th>
+    <th><button (click)="deleteFriendInComponent(friend._id)">Delete</button></th>
+    <!-- creating a new function for deleted -->
+  </tr>
+</table>
+<!-- This page is being displayed, though it is the child of friends because we direct to here -->
+
+<!-- creating links that take in ids to work with them individually -->
+<!-- [routerLink]="['/delete', friend._id] -->

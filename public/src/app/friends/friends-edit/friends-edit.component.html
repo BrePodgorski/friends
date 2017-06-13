@@ -1,0 +1,9 @@
+<h3>Update Friend</h3>
+<!-- add the functionality for the form to pass data -->
+<form *ngIf="friend" (submit)="updateFriendInEditComponent()">
+<!-- when we add this form its going to add a new friend into out component -->
+  First Name: <input type="text" name="first_name" [(ngModel)]="friend.first_name">
+  Last Name: <input type="text" name="last_name" [(ngModel)]="friend.last_name">
+  Birthday: <input type="date" name="birthday" [(ngModel)]="friend.birthday">
+  <input type="submit" value="Edit">
+</form>

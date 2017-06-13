@@ -1,0 +1,9 @@
+<h3>Create a New Friend</h3>
+<!-- add the functionality for the form to pass data -->
+<form (submit)="addFriendInNewComponent(formData)" #formData="ngForm">
+<!-- when we add this form its going to add a new friend into out component -->
+  First Name: <input type="text" name="first_name" ngModel>
+  Last Name: <input type="text" name="last_name" ngModel>
+  Birthday: <input type="date" name="birthday" ngModel>
+  <input type="submit" value="Add">
+</form>
